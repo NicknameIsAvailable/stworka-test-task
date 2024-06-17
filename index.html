@@ -7,8 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section class="container" id="checklistContainer">
+    <section class="container">
+        <div class="check-list">
+            <div class="check-list__container">
+                <div class="progress__block">
+                    <div class="progress__circle">
+                        0/7
+                        <svg class="progress__svg" width="60" height="61" viewBox="0 0 60 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 1.5C31.2504 1.5 32.3932 1.53682 33.5 1.63965" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="progress__text">
+                        <div style="display: flex; justify-content: start;">
+                            <label class="progress__title">
+                                Чеклист
+                            </label>
+                        </div>
+                        <span>
+                            Выполнено: 0 из 7 действий
+                        </span>
+                        <p>
+                            Следующее действие: Созвониться с клиентом до 23.05.24 12:00
+                        </p>
+                    </div>
+                </div>
+                <button class="btn">
+                    Открыть чеклист
+                </button>
+            </div>
+        </div>
     </section>
-    <script src="script.js"></script>
 </body>
 </html>
