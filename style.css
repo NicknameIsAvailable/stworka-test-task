@@ -22,7 +22,7 @@
     font-weight: 400;
     line-height: 20px;
     cursor: pointer;
-    transition: 300ms ease-in-out;
+    transition: transform 300ms ease-in-out;
 }
 
 .btn:hover {
@@ -57,7 +57,6 @@
     position: relative;
     width: 60px;
     height: 60px;
-    border: white 1px solid;
     border-radius: 100%;
     display: flex;
     justify-content: center;
@@ -65,15 +64,30 @@
     font-size: 20px;
 }
 
-.progress__svg {
+.progress__circle svg {
     position: absolute;
-    top: -2px;
+    top: 0;
     left: 0;
-    background: transparent;
+    transform: rotate(-90deg);
 }
-
 .progress__circle .background {
-    stroke: rgba(255, 255, 255, 0.5);
+    fill: none;
+    stroke: #e6e6e6;
+    stroke-width: 1;
+    cx: 30;
+    cy: 30;
+    r: 28;
+}
+.progress__circle .progress {
+    fill: none;
+    stroke: white;
+    stroke-width: 3;
+    cx: 30;
+    cy: 30;
+    r: 28;
+    stroke-dasharray: 170;
+    stroke-dashoffset: calc(170 - (170 * 33 / 100));
+    transition: stroke-dashoffset 0.35s;
 }
 
 .progress__text {
